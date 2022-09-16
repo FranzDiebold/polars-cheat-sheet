@@ -1,0 +1,77 @@
+:root {
+    --primary-color: #24292e;
+}
+
+h1.title {
+    color: var(--primary-color);
+}
+
+h1.title a {
+    color: var(--primary-color);
+}
+
+img.badge {
+    height: 1rem;
+    margin-top: 0.4rem;
+}
+
+img.logo {
+    height: 2.5rem;
+    margin: -0.5rem;
+}
+
+h3 {
+    color: var(--primary-color);
+    font-size: 0.9em;
+    padding-bottom: 0.3em;
+    font-weight: 600;
+}
+
+pre, pre code.hljs {
+    padding: 0.3rem 0.4rem;
+    font-size: 0.7em;
+}
+
+.page {
+    background-color: rgb(244, 244, 244);
+}
+
+.group {
+    background-color: #fbfbfb;
+    margin-bottom: 0.8em;
+    border-left: 1px solid var(--primary-color);
+}
+
+.group h4 {
+    padding-left: 0.6em;
+    padding-top: 0.2em;
+    color: var(--primary-color);
+    font-size: 0.75em;
+    font-weight: 600;
+}
+
+.group a {
+    color: var(--primary-color);
+}
+
+.group .icon {
+    float: right;
+    margin-bottom: -1.5rem;
+}
+
+.group svg {
+    width: 0.8em;
+    height: 0.8em;
+}
+
+.group pre {
+    background-color: #ffffff;
+}
+
+.group img {
+    margin-top: -0.7rem;
+}
+
+.author {
+    font-size: 0.63rem;
+}

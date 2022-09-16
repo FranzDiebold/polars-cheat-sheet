@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="Polars, cheat sheet" />
+    <meta name="author" content="Franz Diebold" />
+
+    <title>Polars cheat sheet</title>
+
+    <link rel="stylesheet" href="A4.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/github.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="columns">
+        <div class="column">
+          <h1 class="title is-4">
+            <a href="https://www.pola.rs/" target="_blank">Polars</a>
+            cheat sheet
+          </h1>
+        </div>
+        <div class="column has-text-centered">
+          <a
+            href="https://colab.research.google.com/github/FranzDiebold/polars-cheat-sheet/blob/main/polars-cheat-sheet.ipynb"
+            target="_blank"
+            ><img
+              src="https://colab.research.google.com/assets/colab-badge.svg"
+              class="badge"
+          /></a>
+        </div>
+        <div class="column has-text-right">
+          <a href="https://www.pola.rs/" target="_blank"
+            ><img src="images/Polars-logo.svg" class="logo"
+          /></a>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-3">
+          <h3>General</h3>
+
+          <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars-book/user-guide/quickstart/intro.html#installation"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
+            <h4>Install</h4>
+            <pre><code class="language-bash">pip install polars</code></pre>
+          </div>
+
+          <div class="group">
+            <h4>Import</h4>
+            <pre><code class="language-python">import polars as pl</code></pre>
+          </div>
+
+          <div class="group">
+            <h4>Creating and reading data frames</h4>
+            <pre><code class="language-python"># Create
+df = pl.DataFrame(
+  {
+    "nrs": [1, 2, 3, None, 5],
+    "names": ["foo", "ham", "spam", "egg", None],
+    "random": [0.3, 0.7, 0.1, 0.9, 0.6],
+    "groups": ["A", "A", "B", "C", "B"],
+  }
+)
+
+# CSV
+df = pl.read_csv("https://j.mp/iriscsv",
+                 has_header=True)
+
+# Parquet
+df = pl.read_parquet("path.parquet")</code></pre>
+          </div>
+
+          <span class="author"
+            >by Franz Diebold (<a href="https://www.diebold.io" target="_blank"
+              >diebold.io</a
+            >)</span
+          >
+        </div>
+        <div class="column is-3"></div>
+
+        <div class="column is-3">
+          <div class="group"></div>
+
+          <div class="group"></div>
+        </div>
+
+        <div class="column is-3"></div>
+      </div>
+    </div>
+  </body>
+</html>
