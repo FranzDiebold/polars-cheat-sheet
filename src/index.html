@@ -94,6 +94,15 @@ df = pl.read_csv("https://j.mp/iriscsv",
 df = pl.read_parquet("path.parquet")</code></pre>
           </div>
 
+          <div class="group">
+            <h4>Querying data</h4>
+            <pre><code class="language-python"># Select columns
+df.select(["nrs", "names"])
+
+# Filter
+df.filter(pl.col("groups") == "B")</code></pre>
+          </div>
+
           <span class="author"
             >by Franz Diebold (<a href="https://www.diebold.io" target="_blank"
               >diebold.io</a
