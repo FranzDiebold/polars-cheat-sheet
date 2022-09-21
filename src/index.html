@@ -74,8 +74,8 @@
             <pre><code class="language-python">import polars as pl</code></pre>
           </div>
 
+          <h3>Creating/reading DataFrames</h3>
           <div class="group">
-            <h4>Creating/reading DataFrames</h4>
             <pre><code class="language-python"># Create DataFrame
 df = pl.DataFrame(
   {
@@ -94,13 +94,27 @@ df = pl.read_csv("https://j.mp/iriscsv",
 df = pl.read_parquet("path.parquet")</code></pre>
           </div>
 
+          <h3>Subset Observations - rows</h3>
           <div class="group">
-            <h4>Querying data</h4>
-            <pre><code class="language-python"># Select columns
-df.select(["nrs", "names"])
+            <pre><code class="language-python"># Filter: Extract rows that meet logical criteria.
+df.filter(pl.col("random") > 0.5)
+df.filter(
+  (pl.col("groups") == "B")
+  & (pl.col("random") > 0.5)
+)</code></pre>
 
-# Filter
-df.filter(pl.col("groups") == "B")</code></pre>
+            <pre><code class="language-python"># Sample
+# Randomly select fraction of rows.
+df.sample(frac=0.5)
+
+# Randomly select n rows.
+df.sample(n=2)</code></pre>
+
+            <pre><code class="language-python"># Select first n rows
+df.head(n=2)
+
+# Select last n rows.
+df.tail(n=2)</code></pre>
           </div>
 
           <span class="author"
@@ -109,7 +123,17 @@ df.filter(pl.col("groups") == "B")</code></pre>
             >)</span
           >
         </div>
-        <div class="column is-3"></div>
+
+        <div class="column is-3">
+          <h3>Subset Variables - columns</h3>
+          <div class="group">
+            <pre><code class="language-python"># Select multiple columns with specific names.
+df.select(["nrs", "names"])</code></pre>
+
+            <pre><code class="language-python"># Select columns whose name matches regex.
+df.select(pl.col("^n.*$"))</code></pre>
+          </div>
+        </div>
 
         <div class="column is-3">
           <div class="group"></div>
