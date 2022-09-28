@@ -1,0 +1,66 @@
+<svg width="242" height="127" viewBox="0 0 242 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_7)">
+<rect x="146" y="25" width="30" height="115" fill="#FF6B6B"/>
+<rect x="146.5" y="101.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="146.5" y="82.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="146.5" y="63.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="146.5" y="44.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="146.5" y="25.5" width="29" height="19" stroke="white"/>
+<rect x="175" y="25" width="30" height="115" fill="#FFD93D"/>
+<rect x="175.5" y="101.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="175.5" y="82.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="175.5" y="63.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="175.5" y="44.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="175.5" y="25.5" width="29" height="19" stroke="white"/>
+<rect x="204" y="25" width="30" height="115" fill="#6BCB77"/>
+<rect x="204.5" y="101.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="204.5" y="82.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="204.5" y="63.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="204.5" y="44.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="204.5" y="25.5" width="29" height="19" stroke="white"/>
+</g>
+<g clip-path="url(#clip1_1_7)">
+<rect x="8" y="81" width="30" height="115" fill="#FF6B6B"/>
+<rect x="8.5" y="119.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="8.5" y="100.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="8.5" y="81.5" width="29" height="19" stroke="white"/>
+<rect x="37" y="81" width="30" height="115" fill="#FFD93D"/>
+<rect x="37.5" y="119.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="37.5" y="100.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="37.5" y="81.5" width="29" height="19" stroke="white"/>
+<rect x="66" y="81" width="30" height="115" fill="#6BCB77"/>
+<rect x="66.5" y="119.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="66.5" y="100.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="66.5" y="81.5" width="29" height="19" stroke="white"/>
+</g>
+<g clip-path="url(#clip2_1_7)">
+<rect x="8" y="7" width="30" height="115" fill="#FF6B6B"/>
+<rect x="8.5" y="64.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="8.5" y="45.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="8.5" y="26.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="8.5" y="7.5" width="29" height="19" stroke="white"/>
+<rect x="37" y="7" width="30" height="115" fill="#FFD93D"/>
+<rect x="37.5" y="64.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="37.5" y="45.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="37.5" y="26.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="37.5" y="7.5" width="29" height="19" stroke="white"/>
+<rect x="66" y="7" width="30" height="115" fill="#6BCB77"/>
+<rect x="66.5" y="64.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="66.5" y="45.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="66.5" y="26.5" width="29" height="19" fill="white" fill-opacity="0.5" stroke="white"/>
+<rect x="66.5" y="7.5" width="29" height="19" stroke="white"/>
+</g>
+<path d="M105.686 87.5333C104.876 87.7069 104.36 88.5043 104.533 89.3143C104.707 90.1243 105.504 90.6403 106.314 90.4667L105.686 87.5333ZM135.259 83.8149C135.709 83.1194 135.51 82.1907 134.815 81.7406L123.481 74.4068C122.785 73.9567 121.856 74.1557 121.406 74.8512C120.956 75.5468 121.155 76.4754 121.851 76.9255L131.926 83.4445L125.407 93.5193C124.957 94.2148 125.156 95.1435 125.851 95.5936C126.547 96.0436 127.475 95.8446 127.925 95.1491L135.259 83.8149ZM106.314 90.4667L134.314 84.4667L133.686 81.5333L105.686 87.5333L106.314 90.4667Z" fill="black"/>
+<path d="M105.686 38.4667C104.876 38.2931 104.36 37.4957 104.533 36.6857C104.707 35.8757 105.504 35.3597 106.314 35.5333L105.686 38.4667ZM135.259 42.1851C135.709 42.8806 135.51 43.8093 134.815 44.2594L123.481 51.5932C122.785 52.0433 121.856 51.8443 121.406 51.1488C120.956 50.4532 121.155 49.5246 121.851 49.0745L131.926 42.5555L125.407 32.4807C124.957 31.7852 125.156 30.8565 125.851 30.4064C126.547 29.9564 127.475 30.1554 127.925 30.8509L135.259 42.1851ZM106.314 35.5333L134.314 41.5333L133.686 44.4667L105.686 38.4667L106.314 35.5333Z" fill="black"/>
+<defs>
+<clipPath id="clip0_1_7">
+<rect width="88" height="77" fill="white" transform="translate(146 25)"/>
+</clipPath>
+<clipPath id="clip1_1_7">
+<rect width="88" height="39" fill="white" transform="translate(8 81)"/>
+</clipPath>
+<clipPath id="clip2_1_7">
+<rect width="88" height="58" fill="white" transform="translate(8 7)"/>
+</clipPath>
+</defs>
+</svg>

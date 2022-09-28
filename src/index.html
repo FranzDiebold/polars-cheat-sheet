@@ -76,24 +76,50 @@
 
           <h3>Creating/reading DataFrames</h3>
           <div class="group">
-            <pre><code class="language-python"># Create DataFrame
-df = pl.DataFrame(
+            <p>Create DataFrame</p>
+            <div class="image">
+              <img src="images/create_data_frame.svg" />
+            </div>
+            <pre><code class="language-python">df = pl.DataFrame(
   {
     "nrs": [1, 2, 3, None, 5],
     "names": ["foo", "ham", "spam", "egg", None],
     "random": [0.3, 0.7, 0.1, 0.9, 0.6],
     "groups": ["A", "A", "B", "C", "B"],
   }
-)
-
-# Read CSV
-df = pl.read_csv("https://j.mp/iriscsv",
-                 has_header=True)
-
-# Read parquet
-df = pl.read_parquet("path.parquet")</code></pre>
+)</code></pre>
           </div>
 
+          <div class="group">
+            <p>Read CSV</p>
+            <pre><code class="language-python">df = pl.read_csv("https://j.mp/iriscsv",
+                 has_header=True)</code></pre>
+          </div>
+          <div class="group">
+            <p>Read parquet</p>
+            <pre><code class="language-python">df = pl.read_parquet("path.parquet")</code></pre>
+          </div>
+
+          <h3>Expressions</h3>
+          <div class="group">
+            <p>
+              Polars expressions can be performed in sequence. This improves
+              readability of code.
+            </p>
+            <pre><code class="language-python">df \
+  .filter(pl.col("nrs") < 4) \
+  .groupby("groups") \
+  .agg(pl.all().sum())</code></pre>
+          </div>
+
+          <span class="author"
+            >by Franz Diebold (<a href="https://www.diebold.io" target="_blank"
+              >diebold.io</a
+            >)</span
+          >
+        </div>
+
+        <div class="column is-3">
           <h3>Subset Observations - rows</h3>
           <div class="group">
             <pre><code class="language-python"># Filter: Extract rows that meet logical criteria.
@@ -117,14 +143,6 @@ df.head(n=2)
 df.tail(n=2)</code></pre>
           </div>
 
-          <span class="author"
-            >by Franz Diebold (<a href="https://www.diebold.io" target="_blank"
-              >diebold.io</a
-            >)</span
-          >
-        </div>
-
-        <div class="column is-3">
           <h3>Subset Variables - columns</h3>
           <div class="group">
             <pre><code class="language-python"># Select multiple columns with specific names.
@@ -147,16 +165,28 @@ df[:, [1, 3]]
 # and only the specific columns.
 df[df["random"] > 0.5, ["names", "groups"]]</code></pre>
           </div>
+        </div>
 
+        <div class="column is-3">
           <h3>Reshaping Data – Change layout, sorting, renaming</h3>
           <div class="group">
-            <pre><code class="language-python"># Append rows of DataFrames.
-pl.concat([df, df2])
+            <div class="image">
+              <img src="images/concat_rows.svg" />
+            </div>
+            <p>Append rows of DataFrames</p>
+            <pre><code class="language-python">pl.concat([df, df2])</code></pre>
+          </div>
 
-# Append columns of DataFrames
-pl.concat([df, df3], how="horizontal")
+          <div class="group">
+            <div class="image">
+              <img src="images/concat_columns.svg" />
+            </div>
+            <p>Append columns of DataFrames</p>
+            <pre><code class="language-python">pl.concat([df, df3], how="horizontal")</code></pre>
+          </div>
 
-# Gather columns into rows.
+          <div class="group">
+            <pre><code class="language-python"># Gather columns into rows.
 df.melt(
   id_vars=["nrs", "names"],
   value_vars=["random", "groups"]
@@ -178,15 +208,9 @@ df.rename({"nrs": "idx"})
 # Drop columns from DataFrame.
 df.drop(["names", "random"])</code></pre>
           </div>
-        </div>
-
-        <div class="column is-3">
-          <div class="group"></div>
 
           <div class="group"></div>
         </div>
-
-        <div class="column is-3"></div>
       </div>
     </div>
   </body>

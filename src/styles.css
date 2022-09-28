@@ -1,11 +1,14 @@
+/* Colors: https://colorhunt.co/palette/ff6b6bffd93d6bcb774d96ff */
+
 :root {
     --primary-color: #24292e;
 }
 
-h1.title {
-    color: var(--primary-color);
+.page {
+    background-color: rgb(244, 244, 244);
 }
 
+h1.title,
 h1.title a {
     color: var(--primary-color);
 }
@@ -24,6 +27,7 @@ h3 {
     color: var(--primary-color);
     font-size: 0.9em;
     padding-bottom: 0.3em;
+    padding-top: 0.5rem;
     font-weight: 600;
 }
 
@@ -32,13 +36,9 @@ pre, pre code.hljs {
     font-size: 0.7em;
 }
 
-.page {
-    background-color: rgb(244, 244, 244);
-}
-
 .group {
     background-color: #fbfbfb;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.5em;
     border-left: 1px solid var(--primary-color);
 }
 
@@ -59,6 +59,14 @@ pre, pre code.hljs {
     margin-bottom: -1.5rem;
 }
 
+.group p {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    padding-left: 0.7rem;
+    padding-top: 0.2rem;
+}
+
 .group svg {
     width: 0.8em;
     height: 0.8em;
@@ -68,8 +76,15 @@ pre, pre code.hljs {
     background-color: #ffffff;
 }
 
-.group img {
-    margin-top: -0.7rem;
+.group .image {
+    display: flex;
+    justify-content: center;
+}
+
+.group .image img {
+    max-width: 7rem;
+    max-height: 5rem;
+    padding: 0.2rem;
 }
 
 .author {
