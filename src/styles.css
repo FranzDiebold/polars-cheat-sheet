@@ -76,12 +76,12 @@ pre, pre code.hljs {
     background-color: #ffffff;
 }
 
-.group .image {
+.image {
     display: flex;
     justify-content: center;
 }
 
-.group .image img {
+.image img {
     max-width: 7rem;
     max-height: 5rem;
     padding: 0.2rem;

@@ -121,21 +121,27 @@
 
         <div class="column is-3">
           <h3>Subset Observations - rows</h3>
+          <div class="image">
+            <img src="images/subset_observations.svg" />
+          </div>
           <div class="group">
-            <pre><code class="language-python"># Filter: Extract rows that meet logical criteria.
-df.filter(pl.col("random") > 0.5)
+            <p>Filter: Extract rows that meet logical criteria.</p>
+            <pre><code class="language-python">df.filter(pl.col("random") > 0.5)
 df.filter(
   (pl.col("groups") == "B")
   & (pl.col("random") > 0.5)
 )</code></pre>
-
-            <pre><code class="language-python"># Sample
-# Randomly select fraction of rows.
+          </div>
+          <div class="group">
+            <p>Sample</p>
+            <pre><code class="language-python"># Randomly select fraction of rows.
 df.sample(frac=0.5)
 
 # Randomly select n rows.
 df.sample(n=2)</code></pre>
-
+          </div>
+          <div class="group">
+            <p>Select first and last rows</p>
             <pre><code class="language-python"># Select first n rows
 df.head(n=2)
 
@@ -144,26 +150,38 @@ df.tail(n=2)</code></pre>
           </div>
 
           <h3>Subset Variables - columns</h3>
-          <div class="group">
-            <pre><code class="language-python"># Select multiple columns with specific names.
-df.select(["nrs", "names"])</code></pre>
-
-            <pre><code class="language-python"># Select columns whose name matches regex.
-df.select(pl.col("^n.*$"))</code></pre>
+          <div class="image">
+            <img src="images/subset_variables.svg" />
           </div>
-
-          <h3>Subsets - rows and columns</h3>
           <div class="group">
-            <pre><code class="language-python"># Select rows 2-4.
-df[2:4, :]
+            <p>Select multiple columns with specific names</p>
+            <pre><code class="language-python">df.select(["nrs", "names"])</code></pre>
+          </div>
+          <div class="group">
+            <p>Select columns whose name matches regex</p>
+            <pre><code class="language-python">df.select(pl.col("^n.*$"))</code></pre>
+          </div>
+        </div>
 
-# Select columns in positions 1 and 3
-# (first column is 0).
-df[:, [1, 3]]
-
-# Select rows meeting logical condition,
-# and only the specific columns.
-df[df["random"] > 0.5, ["names", "groups"]]</code></pre>
+        <div class="column is-3">
+          <h3>Subsets - rows and columns</h3>
+          <div class="image">
+            <img src="images/subsets_rows_and_columns.svg" />
+          </div>
+          <div class="group">
+            <p>Select rows 2-4</p>
+            <pre><code class="language-python">df[2:4, :]</code></pre>
+          </div>
+          <div class="group">
+            <p>Select columns in positions 1 and 3 (first column is 0)</p>
+            <pre><code class="language-python">df[:, [1, 3]]</code></pre>
+          </div>
+          <div class="group">
+            <p>
+              Select rows meeting logical condition, and only the specific
+              columns
+            </p>
+            <pre><code class="language-python">df[df["random"] > 0.5, ["names", "groups"]]</code></pre>
           </div>
         </div>
 
@@ -208,8 +226,6 @@ df.rename({"nrs": "idx"})
 # Drop columns from DataFrame.
 df.drop(["names", "random"])</code></pre>
           </div>
-
-          <div class="group"></div>
         </div>
       </div>
     </div>
