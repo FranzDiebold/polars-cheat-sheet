@@ -1,4 +1,7 @@
-/* Colors: https://colorhunt.co/palette/ff6b6bffd93d6bcb774d96ff */
+/* Colors:
+    https://colorhunt.co/palette/ff6b6bffd93d6bcb774d96ff
+    #a5a5a5
+*/
 
 :root {
     --primary-color: #24292e;
@@ -21,6 +24,10 @@ img.badge {
 img.logo {
     height: 2.5rem;
     margin: -0.5rem;
+}
+
+.columns.content-columns .column {
+    padding-top: 0.1rem;
 }
 
 h3 {

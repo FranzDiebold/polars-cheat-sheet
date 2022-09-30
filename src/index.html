@@ -49,7 +49,8 @@
           /></a>
         </div>
       </div>
-      <div class="columns">
+
+      <div class="columns content-columns">
         <div class="column is-3">
           <h3>General</h3>
 
@@ -204,27 +205,32 @@ df.tail(n=2)</code></pre>
           </div>
 
           <div class="group">
-            <pre><code class="language-python"># Gather columns into rows.
-df.melt(
+            <p>Gather columns into rows</p>
+            <pre><code class="language-python">df.melt(
   id_vars=["nrs", "names"],
   value_vars=["random", "groups"]
-)
-
-# Spread rows into columns.
-df.pivot(values="nrs", index="groups",
-         columns="names")
-
-# Order rows by values of a column (low to high).
+)</code></pre>
+          </div>
+          <div class="group">
+            <p>Spread rows into columns</p>
+            <pre><code class="language-python">df.pivot(values="nrs", index="groups",
+         columns="names")</code></pre>
+          </div>
+          <div class="group">
+            <p>Order rows by values of a column</p>
+            <pre><code class="language-python"># low to high
 df.sort("random")
 
-# Order rows by values of a column (high to low).
-df.sort("random", reverse=True)
-
-# Rename the columns of a DataFrame.
-df.rename({"nrs": "idx"})
-
-# Drop columns from DataFrame.
-df.drop(["names", "random"])</code></pre>
+# high to low
+df.sort("random", reverse=True)</code></pre>
+          </div>
+          <div class="group">
+            <p>Rename the columns of a DataFrame</p>
+            <pre><code class="language-python">df.rename({"nrs": "idx"})</code></pre>
+          </div>
+          <div class="group">
+            <p>Drop columns from DataFrame</p>
+            <pre><code class="language-python">df.drop(["names", "random"])</code></pre>
           </div>
         </div>
       </div>
