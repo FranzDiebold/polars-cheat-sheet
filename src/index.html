@@ -27,31 +27,26 @@
 
   <body>
     <div class="page">
-      <div class="columns">
-        <div class="column">
-          <h1 class="title is-4">
-            <a href="https://www.pola.rs/" target="_blank">Polars</a>
-            cheat sheet
-          </h1>
-        </div>
-        <div class="column has-text-centered">
-          <a
-            href="https://colab.research.google.com/github/FranzDiebold/polars-cheat-sheet/blob/main/polars-cheat-sheet.ipynb"
-            target="_blank"
-            ><img
-              src="https://colab.research.google.com/assets/colab-badge.svg"
-              class="badge"
-          /></a>
-        </div>
-        <div class="column has-text-right">
-          <a href="https://www.pola.rs/" target="_blank"
-            ><img src="images/Polars-logo.svg" class="logo"
-          /></a>
-        </div>
-      </div>
-
       <div class="columns content-columns">
         <div class="column is-3">
+          <div class="has-text-centered">
+            <a href="https://www.pola.rs/" target="_blank"
+              ><img src="images/Polars-logo.svg" class="logo"
+            /></a>
+
+            <h1 class="title is-4">
+              <a href="https://www.pola.rs/" target="_blank">Polars</a>
+              cheat sheet
+            </h1>
+            <a
+              href="https://colab.research.google.com/github/FranzDiebold/polars-cheat-sheet/blob/main/polars-cheat-sheet.ipynb"
+              target="_blank"
+              ><img
+                src="https://colab.research.google.com/assets/colab-badge.svg"
+                class="badge"
+            /></a>
+          </div>
+
           <h3>General</h3>
 
           <div class="group">
@@ -110,7 +105,11 @@
             <pre><code class="language-python">df \
   .filter(pl.col("nrs") < 4) \
   .groupby("groups") \
-  .agg(pl.all().sum())</code></pre>
+  .agg(
+    pl \
+      .all() \
+      .sum()
+)</code></pre>
           </div>
 
           <span class="author"
@@ -162,9 +161,7 @@ df.tail(n=2)</code></pre>
             <p>Select columns whose name matches regex</p>
             <pre><code class="language-python">df.select(pl.col("^n.*$"))</code></pre>
           </div>
-        </div>
 
-        <div class="column is-3">
           <h3>Subsets - rows and columns</h3>
           <div class="image">
             <img src="images/subsets_rows_and_columns.svg" />
@@ -233,6 +230,8 @@ df.sort("random", reverse=True)</code></pre>
             <pre><code class="language-python">df.drop(["names", "random"])</code></pre>
           </div>
         </div>
+
+        <div class="column is-3"></div>
       </div>
     </div>
   </body>
