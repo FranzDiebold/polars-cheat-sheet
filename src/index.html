@@ -231,7 +231,31 @@ df.sort("random", reverse=True)</code></pre>
           </div>
         </div>
 
-        <div class="column is-3"></div>
+        <div class="column is-3">
+          <h3>Summarize Data</h3>
+          <div class="group">
+            <p>Count number of rows with each unique value of variable</p>
+            <pre><code class="language-python">df["groups"].value_counts()</code></pre>
+          </div>
+          <div class="group">
+            <p># of rows in DataFrame</p>
+            <pre><code class="language-python">len(df)
+# or
+df.height</code></pre>
+          </div>
+          <div class="group">
+            <p>Tuple of # of rows, # of columns in DataFrame</p>
+            <pre><code class="language-python">df.shape</code></pre>
+          </div>
+          <div class="group">
+            <p># of distinct values in a column</p>
+            <pre><code class="language-python">df["groups"].n_unique()</code></pre>
+          </div>
+          <div class="group">
+            <p>Basic descriptive and statistics for each column</p>
+            <pre><code class="language-python">df.describe()</code></pre>
+          </div>
+        </div>
       </div>
     </div>
   </body>
