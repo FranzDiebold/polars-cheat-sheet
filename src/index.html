@@ -202,13 +202,19 @@ df.tail(n=2)</code></pre>
           </div>
 
           <div class="group">
+            <div class="image">
+              <img src="images/melt.svg" />
+            </div>
             <p>Gather columns into rows</p>
             <pre><code class="language-python">df.melt(
-  id_vars=["nrs", "names"],
-  value_vars=["random", "groups"]
+  id_vars="nrs",
+  value_vars=["names", "groups"]
 )</code></pre>
           </div>
           <div class="group">
+            <div class="image">
+              <img src="images/pivot.svg" />
+            </div>
             <p>Spread rows into columns</p>
             <pre><code class="language-python">df.pivot(values="nrs", index="groups",
          columns="names")</code></pre>
@@ -252,6 +258,9 @@ df.height</code></pre>
             <pre><code class="language-python">df["groups"].n_unique()</code></pre>
           </div>
           <div class="group">
+            <div class="image">
+              <img src="images/describe.svg" />
+            </div>
             <p>Basic descriptive and statistics for each column</p>
             <pre><code class="language-python">df.describe()</code></pre>
           </div>
