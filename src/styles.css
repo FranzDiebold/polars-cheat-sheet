@@ -8,7 +8,12 @@ Colors (https://colorhunt.co/palette/ff6b6bffd93d6bcb774d96ff):
 */
 
 :root {
-    --primary-color: #24292e;
+    --primary-color: #24292E;
+    --red-color: #FF6B6B;
+    --yellow-color: #FFD93D;
+    --green-color: #6BCB77;
+    --blue-color: #4D96FF;
+    --gray-color: #A5A5A5;
 }
 
 .page {
@@ -49,8 +54,25 @@ pre, pre code.hljs {
     line-height: 1.4;
 }
 
+pre code .is-underlined {
+    text-decoration-thickness: 1.5px !important;
+}
+
+.underlined-red {
+    text-decoration-color: var(--red-color) !important;
+}
+.underlined-yellow {
+    text-decoration-color: var(--yellow-color) !important;
+}
+.underlined-green {
+    text-decoration-color: var(--green-color) !important;
+}
+.underlined-blue {
+    text-decoration-color: var(--blue-color) !important;
+}
+
 .group {
-    background-color: #fbfbfb;
+    background-color: #FBFBFB;
     margin-bottom: 0.45em;
     border-left: 1px solid var(--primary-color);
 }
@@ -87,7 +109,7 @@ pre, pre code.hljs {
 }
 
 .group pre {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
 }
 
 .image {

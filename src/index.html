@@ -206,9 +206,9 @@ df.tail(n=2)</code></pre>
               <img src="images/melt.svg" />
             </div>
             <p>Gather columns into rows</p>
-            <pre><code class="language-python">df.melt(
-  id_vars="nrs",
-  value_vars=["names", "groups"]
+            <pre><code class="hljs nohighlight">df.melt(
+  <span class="is-underlined underlined-green">id_vars</span>=<span class="hljs-string">"nrs"</span>,
+  <span class="is-underlined underlined-yellow">value</span><span class="is-underlined underlined-red">_vars</span>=[<span class="hljs-string">"names"</span>, <span class="hljs-string">"groups"</span>]
 )</code></pre>
           </div>
           <div class="group">
@@ -216,8 +216,8 @@ df.tail(n=2)</code></pre>
               <img src="images/pivot.svg" />
             </div>
             <p>Spread rows into columns</p>
-            <pre><code class="language-python">df.pivot(values="nrs", index="groups",
-         columns="names")</code></pre>
+            <pre><code class="hljs nohighlight">df.pivot(<span class="is-underlined underlined-yellow">values</span>=<span class="hljs-string">"nrs"</span>, <span class="is-underlined underlined-green">index</span>=<span class="hljs-string">"groups"</span>,
+         <span class="is-underlined underlined-red">columns</span>=<span class="hljs-string">"names"</span>)</code></pre>
           </div>
           <div class="group">
             <p>Order rows by values of a column</p>
