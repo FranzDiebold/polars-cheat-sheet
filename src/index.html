@@ -264,6 +264,42 @@ df.height</code></pre>
             <p>Basic descriptive and statistics for each column</p>
             <pre><code class="language-python">df.describe()</code></pre>
           </div>
+          <div class="group">
+            <p>Aggregation functions</p>
+            <pre><code class="language-python">df.select(
+    [
+      # Sum values
+      pl.sum("random").alias("sum"),
+
+      # Minimum value
+      pl.min("random").alias("min"),
+
+      # Maximum value
+      pl.max("random").alias("max"),
+      # or
+      pl.col("random").max().alias("other_max"),
+
+      # Standard deviation
+      pl.std("random").alias("std dev"),
+
+      # Variance
+      pl.var("random").alias("variance"),
+
+      # Median
+      pl.median("random").alias("median"),
+
+      # Mean
+      pl.mean("random").alias("mean"),
+
+      # Quantile
+      pl.quantile("random", 0.75) \
+        .alias("quantile_0.75"),
+      # or
+      pl.col("random").quantile(0.75) \
+        .alias("other_quantile_0.75"),
+    ]
+)</code></pre>
+          </div>
         </div>
       </div>
     </div>
