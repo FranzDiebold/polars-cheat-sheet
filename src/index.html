@@ -98,6 +98,17 @@
 
           <h3>Expressions</h3>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars-book/user-guide/dsl/expressions.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>
               Polars expressions can be performed in sequence. This improves
               readability of code.
@@ -125,6 +136,17 @@
             <img src="images/subset_observations.svg" />
           </div>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars-book/user-guide/dsl/expressions.html#filter-and-conditionals"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Filter: Extract rows that meet logical criteria.</p>
             <pre><code class="language-python">df.filter(pl.col("random") > 0.5)
 df.filter(
@@ -154,10 +176,32 @@ df.tail(n=2)</code></pre>
             <img src="images/subset_variables.svg" />
           </div>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars-book/user-guide/howcani/selecting_data/selecting_data_expressions.html#select-a-list-of-columns"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Select multiple columns with specific names</p>
             <pre><code class="language-python">df.select(["nrs", "names"])</code></pre>
           </div>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars-book/user-guide/howcani/selecting_data/selecting_data_expressions.html#select-columns-with-an-expression"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Select columns whose name matches regex</p>
             <pre><code class="language-python">df.select(pl.col("^n.*$"))</code></pre>
           </div>
@@ -189,6 +233,17 @@ df.tail(n=2)</code></pre>
             <div class="image">
               <img src="images/concat_rows.svg" />
             </div>
+            <a
+              href="https://pola-rs.github.io/polars-book/user-guide/howcani/combining_data/concatenating.html#vertical-concatenation---getting-longer"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Append rows of DataFrames</p>
             <pre><code class="language-python">pl.concat([df, df2])</code></pre>
           </div>
@@ -197,6 +252,17 @@ df.tail(n=2)</code></pre>
             <div class="image">
               <img src="images/concat_columns.svg" />
             </div>
+            <a
+              href="https://pola-rs.github.io/polars-book/user-guide/howcani/combining_data/concatenating.html#horizontal-concatenation---getting-wider"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Append columns of DataFrames</p>
             <pre><code class="language-python">pl.concat([df, df3], how="horizontal")</code></pre>
           </div>
@@ -265,6 +331,17 @@ df.height</code></pre>
             <pre><code class="language-python">df.describe()</code></pre>
           </div>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars-book/user-guide/dsl/expressions.html#various-aggregations"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Aggregation functions</p>
             <pre><code class="language-python">df.select(
     [
