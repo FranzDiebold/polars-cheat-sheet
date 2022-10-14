@@ -93,7 +93,8 @@
           </div>
           <div class="group">
             <p>Read parquet</p>
-            <pre><code class="language-python">df = pl.read_parquet("path.parquet")</code></pre>
+            <pre><code class="language-python">df = pl.read_parquet("path.parquet",
+                     columns=["select", "columns"])</code></pre>
           </div>
 
           <h3>Expressions</h3>
@@ -374,6 +375,9 @@ df.height</code></pre>
       # or
       pl.col("random").quantile(0.75) \
         .alias("other_quantile_0.75"),
+
+      # First value
+      pl.first("random").alias("first"),
     ]
 )</code></pre>
           </div>
