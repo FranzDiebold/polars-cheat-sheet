@@ -384,5 +384,78 @@ df.height</code></pre>
         </div>
       </div>
     </div>
+
+    <div class="page">
+      <div class="columns content-columns">
+        <div class="column is-3">
+          <h3>Group Data</h3>
+          <div class="image">
+            <img src="images/groupby.svg" />
+          </div>
+          <div class="group">
+            <p>
+              Group by values in column named "col", returning a GroupBy object
+            </p>
+            <pre><code class="language-python">df.groupby("groups")</code></pre>
+          </div>
+          <div class="group">
+            <p>
+              All of the aggregation functions from above can be applied to a
+              group as well
+            </p>
+            <pre><code class="language-python">df.groupby(by="groups").agg(
+  [
+      # Sum values
+      pl.sum("random").alias("sum"),
+
+      # Minimum value
+      pl.min("random").alias("min"),
+
+      # Maximum value
+      pl.max("random").alias("max"),
+      # or
+      pl.col("random").max().alias("other_max"),
+
+      # Standard deviation
+      pl.std("random").alias("std_dev"),
+
+      # Variance
+      pl.var("random").alias("variance"),
+
+      # Median
+      pl.median("random").alias("median"),
+
+      # Mean
+      pl.mean("random").alias("mean"),
+
+      # Quantile
+      pl.quantile("random", 0.75) \
+        .alias("quantile_0.75"),
+      # or
+      pl.col("random").quantile(0.75) \
+        .alias("other_quantile_0.75"),
+
+      # First value
+      pl.first("random").alias("first"),
+  ]
+)</code></pre>
+          </div>
+          <div class="group">
+            <p>Additional GroupBy functions</p>
+            <pre><code class="language-python">df.groupby(by="groups").agg(
+  [
+    # Count the number of values in each group
+    pl.count("random").alias("size"),
+
+    # Sample one element in each group
+    pl.col("names").apply(
+      lambda group_df: group_df.sample(1)
+    ),
+  ]
+)</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
