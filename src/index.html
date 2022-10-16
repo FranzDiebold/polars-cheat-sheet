@@ -466,6 +466,22 @@ df.height</code></pre>
 )</code></pre>
           </div>
         </div>
+
+        <div class="column is-3">
+          <h3>Handling Missing Data</h3>
+          <div class="group">
+            <p>Drop rows with any column having a null value</p>
+            <pre><code class="language-python">df.drop_nulls()</code></pre>
+          </div>
+          <div class="group">
+            <p>Replace null values with given value</p>
+            <pre><code class="language-python">df.fill_null(42)</code></pre>
+          </div>
+          <div class="group">
+            <p>Replace floating point NaN values with given value</p>
+            <pre><code class="language-python">df.fill_nan(42)</code></pre>
+          </div>
+        </div>
       </div>
     </div>
   </body>
