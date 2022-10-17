@@ -481,6 +481,33 @@ df.height</code></pre>
             <p>Replace floating point NaN values with given value</p>
             <pre><code class="language-python">df.fill_nan(42)</code></pre>
           </div>
+
+          <h3>Make New Columns</h3>
+          <div class="image">
+            <img src="images/new_columns.svg" />
+          </div>
+          <div class="group">
+            <p>Add a new columns to the DataFrame</p>
+            <pre><code class="language-python">df.with_column(
+  (pl.col("random") * pl.col("nrs")) \
+    .alias("product")
+)</code></pre>
+          </div>
+          <div class="group">
+            <p>Add several new columns to the DataFrame</p>
+            <pre><code class="language-python">df.with_columns(
+    [
+        (pl.col("random") * pl.col("nrs")) \
+          .alias("product"),
+        pl.col("names").str.lengths() \
+          .alias("names_lengths"),
+    ]
+)</code></pre>
+          </div>
+          <div class="group">
+            <p>Add a column at index 0 that counts the rows</p>
+            <pre><code class="language-python">df.with_row_count()</code></pre>
+          </div>
         </div>
       </div>
     </div>
