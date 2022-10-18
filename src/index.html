@@ -87,11 +87,33 @@
           </div>
 
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars-book/user-guide/howcani/io/csv.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Read CSV</p>
             <pre><code class="language-python">df = pl.read_csv("https://j.mp/iriscsv",
                  has_header=True)</code></pre>
           </div>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars-book/user-guide/howcani/io/parquet.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Read parquet</p>
             <pre><code class="language-python">df = pl.read_parquet("path.parquet",
                      columns=["select", "columns"])</code></pre>
@@ -156,6 +178,17 @@ df.filter(
 )</code></pre>
           </div>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.sample.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Sample</p>
             <pre><code class="language-python"># Randomly select fraction of rows.
 df.sample(frac=0.5)
@@ -272,6 +305,17 @@ df.tail(n=2)</code></pre>
             <div class="image">
               <img src="images/melt.svg" />
             </div>
+            <a
+              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.melt.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Gather columns into rows</p>
             <pre><code class="hljs nohighlight">df.melt(
   <span class="is-underlined underlined-green">id_vars</span>=<span class="hljs-string">"nrs"</span>,
@@ -282,11 +326,33 @@ df.tail(n=2)</code></pre>
             <div class="image">
               <img src="images/pivot.svg" />
             </div>
+            <a
+              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.pivot.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Spread rows into columns</p>
             <pre><code class="hljs nohighlight">df.pivot(<span class="is-underlined underlined-yellow">values</span>=<span class="hljs-string">"nrs"</span>, <span class="is-underlined underlined-green">index</span>=<span class="hljs-string">"groups"</span>,
          <span class="is-underlined underlined-red">columns</span>=<span class="hljs-string">"names"</span>)</code></pre>
           </div>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.sort.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Order rows by values of a column</p>
             <pre><code class="language-python"># low to high
 df.sort("random")
@@ -470,14 +536,47 @@ df.height</code></pre>
         <div class="column is-3">
           <h3>Handling Missing Data</h3>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.drop_nulls.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Drop rows with any column having a null value</p>
             <pre><code class="language-python">df.drop_nulls()</code></pre>
           </div>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.fill_null.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Replace null values with given value</p>
             <pre><code class="language-python">df.fill_null(42)</code></pre>
           </div>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.fill_nan.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Replace floating point NaN values with given value</p>
             <pre><code class="language-python">df.fill_nan(42)</code></pre>
           </div>
@@ -487,6 +586,17 @@ df.height</code></pre>
             <img src="images/new_columns.svg" />
           </div>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.with_column.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Add a new columns to the DataFrame</p>
             <pre><code class="language-python">df.with_column(
   (pl.col("random") * pl.col("nrs")) \
@@ -494,6 +604,17 @@ df.height</code></pre>
 )</code></pre>
           </div>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.with_columns.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Add several new columns to the DataFrame</p>
             <pre><code class="language-python">df.with_columns(
     [
@@ -505,6 +626,17 @@ df.height</code></pre>
 )</code></pre>
           </div>
           <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.with_row_count.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
             <p>Add a column at index 0 that counts the rows</p>
             <pre><code class="language-python">df.with_row_count()</code></pre>
           </div>
