@@ -641,6 +641,58 @@ df.height</code></pre>
             <pre><code class="language-python">df.with_row_count()</code></pre>
           </div>
         </div>
+
+        <div class="column is-3">
+          <h3>Rolling Functions</h3>
+          <div class="group">
+            <p>The following rolling functions are available</p>
+            <pre><code class="language-python">df.select(
+    [
+        # Rolling maximum value
+        pl.col("random") \
+          .rolling_max(window_size=2) \
+          .alias("rolling_max"),
+
+        # Rolling mean value
+        pl.col("random") \
+          .rolling_mean(window_size=2) \
+          .alias("rolling_mean"),
+
+        # Rolling median value
+        pl.col("random") \
+          .rolling_median(
+              window_size=2, min_periods=2) \
+          .alias("rolling_median"),
+
+        # Rolling minimum value
+        pl.col("random") \
+          .rolling_min(window_size=2) \
+          .alias("rolling_min"),
+
+        # Rolling standard deviation
+        pl.col("random") \
+          .rolling_std(window_size=2) \
+          .alias("rolling_std"),
+
+        # Rolling sum values
+        pl.col("random") \
+          .rolling_sum(window_size=2) \
+          .alias("rolling_sum"),
+
+        # Rolling variance
+        pl.col("random") \
+          .rolling_var(window_size=2) \
+          .alias("rolling_var"),
+
+        # Rolling custom function
+        pl.col("random") \
+          .rolling_apply(
+            function=np.nanstd, window_size=2) \
+          .alias("rolling_apply"),
+    ]
+)</code></pre>
+          </div>
+        </div>
       </div>
     </div>
   </body>
