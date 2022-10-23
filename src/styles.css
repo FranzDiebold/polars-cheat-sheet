@@ -123,6 +123,14 @@ pre code .is-underlined {
     padding: 0.2rem;
 }
 
-.author {
+.info-columns {
+    margin-top: -3.4rem;
+}
+
+.infos {
     font-size: 0.63rem;
+}
+
+.infos-small {
+    font-size: 0.5rem;
 }
