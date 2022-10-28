@@ -616,6 +616,14 @@ df.height</code></pre>
             <pre><code class="language-python">df.fill_null(42)</code></pre>
           </div>
           <div class="group">
+            <p>Replace null values using forward strategy</p>
+            <pre><code class="language-python">df.fill_null(strategy="forward")</code></pre>
+            <p>
+              Other fill strategies are "backward", "min", "max", "mean", "zero"
+              and "one"
+            </p>
+          </div>
+          <div class="group">
             <a
               href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.fill_nan.html"
               target="_blank"
