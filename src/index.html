@@ -586,6 +586,9 @@ df.height</code></pre>
         <div class="column is-3">
           <h3>Handling Missing Data</h3>
           <div class="group">
+            <div class="image">
+              <img src="images/drop_nulls.svg" />
+            </div>
             <a
               href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.drop_nulls.html"
               target="_blank"
@@ -601,6 +604,9 @@ df.height</code></pre>
             <pre><code class="language-python">df.drop_nulls()</code></pre>
           </div>
           <div class="group">
+            <div class="image">
+              <img src="images/fill_null_value.svg" />
+            </div>
             <a
               href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.fill_null.html"
               target="_blank"
@@ -616,6 +622,9 @@ df.height</code></pre>
             <pre><code class="language-python">df.fill_null(42)</code></pre>
           </div>
           <div class="group">
+            <div class="image">
+              <img src="images/fill_null_forward.svg" />
+            </div>
             <p>Replace null values using forward strategy</p>
             <pre><code class="language-python">df.fill_null(strategy="forward")</code></pre>
             <p>
@@ -698,33 +707,6 @@ df.height</code></pre>
             <p>Add a column at index 0 that counts the rows</p>
             <pre><code class="language-python">df.with_row_count()</code></pre>
           </div>
-
-          <h3>Combine Data Sets</h3>
-          <div class="group">
-            <a
-              href="https://pola-rs.github.io/polars-book/user-guide/howcani/combining_data/joining.html"
-              target="_blank"
-            >
-              <span class="icon"
-                ><svg viewBox="0 0 24 24">
-                  <path
-                    fill="currentColor"
-                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
-                  /></svg></span
-            ></a>
-            <p>Inner Join</p>
-            <pre><code class="language-python">df.join(df4, on="nrs")
-# or
-df.join(df4, on="nrs", how="inner")</code></pre>
-          </div>
-          <div class="group">
-            <p>Left Join</p>
-            <pre><code class="language-python">df.join(df4, on="nrs", how="left")</code></pre>
-          </div>
-          <div class="group">
-            <p>Outer Join</p>
-            <pre><code class="language-python">df.join(df4, on="nrs", how="outer")</code></pre>
-          </div>
         </div>
 
         <div class="column is-3">
@@ -777,7 +759,8 @@ df.join(df4, on="nrs", how="inner")</code></pre>
     ]
 )</code></pre>
           </div>
-
+        </div>
+        <div class="column is-3">
           <h3>Window Functions</h3>
           <div class="group">
             <a
@@ -804,6 +787,33 @@ df.join(df4, on="nrs", how="inner")</code></pre>
           .alias("sum_by_groups"),
     ]
 )</code></pre>
+          </div>
+
+          <h3>Combine Data Sets</h3>
+          <div class="group">
+            <a
+              href="https://pola-rs.github.io/polars-book/user-guide/howcani/combining_data/joining.html"
+              target="_blank"
+            >
+              <span class="icon"
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  /></svg></span
+            ></a>
+            <p>Inner Join</p>
+            <pre><code class="language-python">df.join(df4, on="nrs")
+# or
+df.join(df4, on="nrs", how="inner")</code></pre>
+          </div>
+          <div class="group">
+            <p>Left Join</p>
+            <pre><code class="language-python">df.join(df4, on="nrs", how="left")</code></pre>
+          </div>
+          <div class="group">
+            <p>Outer Join</p>
+            <pre><code class="language-python">df.join(df4, on="nrs", how="outer")</code></pre>
           </div>
         </div>
       </div>
