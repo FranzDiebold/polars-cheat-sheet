@@ -794,6 +794,9 @@ df.height</code></pre>
 
           <h3>Combine Data Sets</h3>
           <div class="group">
+            <div class="image">
+              <img src="images/inner_join.svg" />
+            </div>
             <a
               href="https://pola-rs.github.io/polars-book/user-guide/howcani/combining_data/joining.html"
               target="_blank"
@@ -811,10 +814,16 @@ df.height</code></pre>
 df.join(df4, on="nrs", how="inner")</code></pre>
           </div>
           <div class="group">
+            <div class="image">
+              <img src="images/left_join.svg" />
+            </div>
             <p>Left Join</p>
             <pre><code class="language-python">df.join(df4, on="nrs", how="left")</code></pre>
           </div>
           <div class="group">
+            <div class="image">
+              <img src="images/outer_join.svg" />
+            </div>
             <p>Outer Join</p>
             <pre><code class="language-python">df.join(df4, on="nrs", how="outer")</code></pre>
           </div>
