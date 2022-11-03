@@ -123,6 +123,22 @@ pre code .is-underlined {
     padding: 0.2rem;
 }
 
+.image img.width-8 {
+    max-width: 8rem;
+}
+
+.image img.width-9 {
+    max-width: 9rem;
+}
+
+.image img.width-10 {
+    max-width: 10rem;
+}
+
+.image img.width-14 {
+    max-width: 14rem;
+}
+
 .info-columns {
     margin-top: -3.4rem;
 }
