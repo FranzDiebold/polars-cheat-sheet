@@ -754,6 +754,19 @@ df.height</code></pre>
           .rolling_var(window_size=2) \
           .alias("rolling_var"),
 
+        # Rolling quantile
+        pl.col("random") \
+          .rolling_quantile(
+            quantile=0.75, window_size=2,
+            min_periods=2
+          ) \
+          .alias("rolling_quantile"),
+
+        # Rolling skew
+        pl.col("random") \
+          .rolling_skew(window_size=2) \
+          .alias("rolling_skew"),
+
         # Rolling custom function
         pl.col("random") \
           .rolling_apply(
