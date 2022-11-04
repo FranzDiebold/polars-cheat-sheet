@@ -103,6 +103,12 @@ pre code .is-underlined {
     padding-top: 0.2rem;
 }
 
+.group p.description {
+    font-size: 0.5rem;
+    font-weight: 500;
+    padding-top: 0;
+}
+
 .group svg {
     width: 0.8em;
     height: 0.8em;

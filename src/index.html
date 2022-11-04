@@ -822,6 +822,9 @@ df.height</code></pre>
                   /></svg></span
             ></a>
             <p>Inner Join</p>
+            <p class="description">
+              Retains only rows with a match in the other set.
+            </p>
             <pre><code class="language-python">df.join(df4, on="nrs")
 # or
 df.join(df4, on="nrs", how="inner")</code></pre>
@@ -831,6 +834,7 @@ df.join(df4, on="nrs", how="inner")</code></pre>
               <img src="images/left_join.svg" class="width-14" />
             </div>
             <p>Left Join</p>
+            <p class="description">Retains each row from "left" set (df).</p>
             <pre><code class="language-python">df.join(df4, on="nrs", how="left")</code></pre>
           </div>
           <div class="group">
@@ -838,6 +842,9 @@ df.join(df4, on="nrs", how="inner")</code></pre>
               <img src="images/outer_join.svg" class="width-14" />
             </div>
             <p>Outer Join</p>
+            <p class="description">
+              Retains each row, even if no other matching row exists.
+            </p>
             <pre><code class="language-python">df.join(df4, on="nrs", how="outer")</code></pre>
           </div>
           <div class="group">
@@ -845,6 +852,9 @@ df.join(df4, on="nrs", how="inner")</code></pre>
               <img src="images/anti_join.svg" class="width-14" />
             </div>
             <p>Anti Join</p>
+            <p class="description">
+              Contains all rows from df that do not have a match in df4.
+            </p>
             <pre><code class="language-python">df.join(df4, on="nrs", how="anti")</code></pre>
           </div>
         </div>
