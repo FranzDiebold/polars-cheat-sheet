@@ -141,12 +141,16 @@ pre code .is-underlined {
     max-width: 10rem;
 }
 
-.image img.width-14 {
-    max-width: 14rem;
+.image img.width-15 {
+    max-width: 15rem;
 }
 
-.info-columns {
+.info-columns-1 {
     margin-top: -3.4rem;
+}
+
+.info-columns-2 {
+    margin-top: -2.9rem;
 }
 
 .infos {
