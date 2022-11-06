@@ -2,8 +2,6 @@ name: Build and deploy cheat sheet
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
   deploy:
