@@ -7,6 +7,9 @@ Colors (https://colorhunt.co/palette/ff6b6bffd93d6bcb774d96ff):
 - gray: #A5A5A5
 */
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Fira+Code');
+
 :root {
     --primary-color: #24292E;
     --red-color: #FF6B6B;
@@ -14,6 +17,14 @@ Colors (https://colorhunt.co/palette/ff6b6bffd93d6bcb774d96ff):
     --green-color: #6BCB77;
     --blue-color: #4D96FF;
     --gray-color: #A5A5A5;
+}
+
+body {
+    font-family: 'Open Sans';
+}
+
+code {
+    font-family: 'Fira Code';
 }
 
 .page {
