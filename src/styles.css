@@ -7,6 +7,9 @@ Colors (https://colorhunt.co/palette/ff6b6bffd93d6bcb774d96ff):
 - gray: #A5A5A5
 */
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Fira+Code');
+
 :root {
     --primary-color: #24292E;
     --red-color: #FF6B6B;
@@ -14,6 +17,14 @@ Colors (https://colorhunt.co/palette/ff6b6bffd93d6bcb774d96ff):
     --green-color: #6BCB77;
     --blue-color: #4D96FF;
     --gray-color: #A5A5A5;
+}
+
+body {
+    font-family: 'Open Sans';
+}
+
+code {
+    font-family: 'Fira Code';
 }
 
 .page {
@@ -124,29 +135,11 @@ pre code .is-underlined {
 }
 
 .image img {
-    max-width: 7rem;
-    max-height: 5rem;
     padding: 0.2rem;
 }
 
-.image img.width-8 {
-    max-width: 8rem;
-}
-
-.image img.width-9 {
-    max-width: 9rem;
-}
-
-.image img.width-10 {
-    max-width: 10rem;
-}
-
-.image img.width-15 {
-    max-width: 15rem;
-}
-
 .info-columns-1 {
-    margin-top: -3.4rem;
+    margin-top: -3rem;
 }
 
 .info-columns-2 {
