@@ -18,7 +18,7 @@ jobs:
         with:
           htmlFile: src/index.html
           outputFile: build/Polars_cheat_sheet.pdf
-          pdfOptions: '{"format": "A4", "landscape": true, "printBackground": true, "pageRanges": "1-2"}'
+          pdfOptions: '{"format": "A4", "landscape": true, "printBackground": true, "pageRanges": "1-2", "scale": 1.02}'
 
       - name: Create preview image
         uses: jruipinto/ImageMagick-action@v1
