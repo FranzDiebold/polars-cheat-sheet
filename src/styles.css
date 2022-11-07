@@ -124,28 +124,11 @@ pre code .is-underlined {
 }
 
 .image img {
-    width: 7rem;
     padding: 0.2rem;
 }
 
-.image img.width-8 {
-    width: 8rem;
-}
-
-.image img.width-9 {
-    width: 9rem;
-}
-
-.image img.width-10 {
-    width: 10rem;
-}
-
-.image img.width-15 {
-    width: 15rem;
-}
-
 .info-columns-1 {
-    margin-top: -3.4rem;
+    margin-top: -3rem;
 }
 
 .info-columns-2 {
