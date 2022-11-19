@@ -62,7 +62,7 @@ h3 {
 pre, pre code.hljs {
     padding: 0.15rem 0.3rem;
     font-size: 0.7em;
-    line-height: 1.4;
+    line-height: 11.4px;
 }
 
 pre code .is-underlined {
