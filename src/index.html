@@ -51,7 +51,7 @@
 
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars-book/user-guide/quickstart/intro.html#installation"
+              href="https://docs.pola.rs/user-guide/installation/#installation"
               target="_blank"
             >
               <span class="icon"
@@ -73,7 +73,7 @@
           <h3>Creating/reading DataFrames</h3>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.html"
+              href="https://docs.pola.rs/py-polars/html/reference/dataframe/index.html"
               target="_blank"
             >
               <span class="icon"
@@ -99,7 +99,7 @@
 
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars-book/user-guide/howcani/io/csv.html"
+              href="https://docs.pola.rs/user-guide/io/csv/"
               target="_blank"
             >
               <span class="icon"
@@ -115,7 +115,7 @@
           </div>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars-book/user-guide/howcani/io/parquet.html"
+              href="https://docs.pola.rs/user-guide/io/parquet/"
               target="_blank"
             >
               <span class="icon"
@@ -133,7 +133,7 @@
           <h3>Expressions</h3>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars-book/user-guide/dsl/expressions.html"
+              href="https://docs.pola.rs/user-guide/getting-started/#expressions"
               target="_blank"
             >
               <span class="icon"
@@ -149,7 +149,7 @@
             </p>
             <pre><code class="language-python">df \
   .filter(pl.col("nrs") < 4) \
-  .groupby("groups") \
+  .group_by("groups") \
   .agg(
     pl \
       .all() \
@@ -165,7 +165,7 @@
           </div>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars-book/user-guide/dsl/expressions.html#filter-and-conditionals"
+              href="https://docs.pola.rs/user-guide/getting-started/#filter"
               target="_blank"
             >
               <span class="icon"
@@ -184,7 +184,7 @@ df.filter(
           </div>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.sample.html"
+              href="https://docs.pola.rs/user-guide/concepts/data-structures/#sample"
               target="_blank"
             >
               <span class="icon"
@@ -196,7 +196,7 @@ df.filter(
             ></a>
             <p>Sample</p>
             <pre><code class="language-python"># Randomly select fraction of rows.
-df.sample(frac=0.5)
+df.sample(fraction=0.5)
 
 # Randomly select n rows.
 df.sample(n=2)</code></pre>
@@ -216,7 +216,7 @@ df.tail(n=2)</code></pre>
           </div>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars-book/user-guide/howcani/selecting_data/selecting_data_expressions.html#select-a-list-of-columns"
+              href="https://docs.pola.rs/user-guide/expressions/column-selections/"
               target="_blank"
             >
               <span class="icon"
@@ -231,7 +231,7 @@ df.tail(n=2)</code></pre>
           </div>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars-book/user-guide/howcani/selecting_data/selecting_data_expressions.html#select-columns-with-an-expression"
+              href="https://docs.pola.rs/user-guide/expressions/column-selections/#by-regular-expressions"
               target="_blank"
             >
               <span class="icon"
@@ -265,7 +265,7 @@ df.tail(n=2)</code></pre>
               Select rows meeting logical condition, and only the specific
               columns
             </p>
-            <pre><code class="language-python">df[df["random"] > 0.5, ["names", "groups"]]</code></pre>
+            <pre><code class="language-python">df.filter(pl.col("random") > 0.5).select(["names", "groups"])</code></pre>
           </div>
         </div>
 
@@ -276,7 +276,7 @@ df.tail(n=2)</code></pre>
               <img src="images/concat_rows.svg" style="height: 5rem" />
             </div>
             <a
-              href="https://pola-rs.github.io/polars-book/user-guide/howcani/combining_data/concatenating.html#vertical-concatenation---getting-longer"
+              href="https://docs.pola.rs/user-guide/transformations/concatenation/#vertical-concatenation-getting-longer"
               target="_blank"
             >
               <span class="icon"
@@ -295,7 +295,7 @@ df.tail(n=2)</code></pre>
               <img src="images/concat_columns.svg" style="height: 5.4rem" />
             </div>
             <a
-              href="https://pola-rs.github.io/polars-book/user-guide/howcani/combining_data/concatenating.html#horizontal-concatenation---getting-wider"
+              href="https://docs.pola.rs/user-guide/transformations/concatenation/#horizontal-concatenation-getting-wider"
               target="_blank"
             >
               <span class="icon"
@@ -314,7 +314,7 @@ df.tail(n=2)</code></pre>
               <img src="images/melt.svg" style="height: 4.4rem" />
             </div>
             <a
-              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.melt.html"
+              href="https://docs.pola.rs/user-guide/transformations/melt/"
               target="_blank"
             >
               <span class="icon"
@@ -335,7 +335,7 @@ df.tail(n=2)</code></pre>
               <img src="images/pivot.svg" style="height: 3.9rem" />
             </div>
             <a
-              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.pivot.html"
+              href="https://docs.pola.rs/user-guide/transformations/pivot/"
               target="_blank"
             >
               <span class="icon"
@@ -351,7 +351,7 @@ df.tail(n=2)</code></pre>
           </div>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.sort.html"
+              href="https://docs.pola.rs/py-polars/html/reference/dataframe/api/polars.DataFrame.sort.html"
               target="_blank"
             >
               <span class="icon"
@@ -366,11 +366,11 @@ df.tail(n=2)</code></pre>
 df.sort("random")
 
 # high to low
-df.sort("random", reverse=True)</code></pre>
+df.sort("random", descending=True)</code></pre>
           </div>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.rename.html"
+              href="https://docs.pola.rs/py-polars/html/reference/dataframe/api/polars.DataFrame.rename.html"
               target="_blank"
             >
               <span class="icon"
@@ -385,7 +385,7 @@ df.sort("random", reverse=True)</code></pre>
           </div>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.drop.html"
+              href="https://docs.pola.rs/py-polars/html/reference/dataframe/api/polars.DataFrame.drop.html"
               target="_blank"
             >
               <span class="icon"
@@ -513,7 +513,7 @@ df.height</code></pre>
           </div>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars-book/user-guide/dsl/groupby.html"
+              href="https://docs.pola.rs/user-guide/concepts/contexts/#group-by-aggregation"
               target="_blank"
             >
               <span class="icon"
@@ -526,14 +526,14 @@ df.height</code></pre>
             <p>
               Group by values in column named "col", returning a GroupBy object
             </p>
-            <pre><code class="language-python">df.groupby("groups")</code></pre>
+            <pre><code class="language-python">df.group_by("groups")</code></pre>
           </div>
           <div class="group">
             <p>
               All of the aggregation functions from above can be applied to a
               group as well
             </p>
-            <pre><code class="language-python">df.groupby(by="groups").agg(
+            <pre><code class="language-python">df.group_by("groups").agg(
   [
       # Sum values
       pl.sum("random").alias("sum"),
@@ -572,13 +572,13 @@ df.height</code></pre>
           </div>
           <div class="group">
             <p>Additional GroupBy functions</p>
-            <pre><code class="language-python">df.groupby(by="groups").agg(
+            <pre><code class="language-python">df.group_by("groups").agg(
   [
     # Count the number of values in each group
     pl.count("random").alias("size"),
 
     # Sample one element in each group
-    pl.col("names").apply(
+    pl.col("names").map_elements(
       lambda group_df: group_df.sample(1)
     ),
   ]
@@ -593,7 +593,7 @@ df.height</code></pre>
               <img src="images/drop_nulls.svg" style="height: 3.3rem" />
             </div>
             <a
-              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.drop_nulls.html"
+              href="https://docs.pola.rs/py-polars/html/reference/dataframe/api/polars.DataFrame.drop_nulls.html"
               target="_blank"
             >
               <span class="icon"
@@ -611,7 +611,7 @@ df.height</code></pre>
               <img src="images/fill_null_value.svg" style="height: 3.3rem" />
             </div>
             <a
-              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.fill_null.html"
+              href="https://docs.pola.rs/py-polars/html/reference/dataframe/api/polars.DataFrame.fill_null.html"
               target="_blank"
             >
               <span class="icon"
@@ -637,7 +637,7 @@ df.height</code></pre>
           </div>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.fill_nan.html"
+              href="https://docs.pola.rs/py-polars/html/reference/dataframe/api/polars.DataFrame.fill_nan.html"
               target="_blank"
             >
               <span class="icon"
@@ -657,7 +657,7 @@ df.height</code></pre>
           </div>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.with_column.html"
+              href="https://docs.pola.rs/py-polars/html/reference/dataframe/api/polars.DataFrame.with_columns.html"
               target="_blank"
             >
               <span class="icon"
@@ -668,14 +668,14 @@ df.height</code></pre>
                   /></svg></span
             ></a>
             <p>Add a new columns to the DataFrame</p>
-            <pre><code class="language-python">df.with_column(
+            <pre><code class="language-python">df.with_columns(
   (pl.col("random") * pl.col("nrs")) \
     .alias("product")
 )</code></pre>
           </div>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.with_columns.html"
+              href="https://docs.pola.rs/py-polars/html/reference/dataframe/api/polars.DataFrame.with_columns.html"
               target="_blank"
             >
               <span class="icon"
@@ -690,14 +690,14 @@ df.height</code></pre>
     [
         (pl.col("random") * pl.col("nrs")) \
           .alias("product"),
-        pl.col("names").str.lengths() \
-          .alias("names_lengths"),
+        pl.col("names").str.len_bytes() \
+          .alias("names_len_bytes"),
     ]
 )</code></pre>
           </div>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars/py-polars/html/reference/api/polars.DataFrame.with_row_count.html"
+              href="https://docs.pola.rs/py-polars/html/reference/dataframe/api/polars.DataFrame.with_row_index.html"
               target="_blank"
             >
               <span class="icon"
@@ -708,7 +708,7 @@ df.height</code></pre>
                   /></svg></span
             ></a>
             <p>Add a column at index 0 that counts the rows</p>
-            <pre><code class="language-python">df.with_row_count()</code></pre>
+            <pre><code class="language-python">df.with_row_index()</code></pre>
           </div>
         </div>
 
@@ -772,9 +772,9 @@ df.height</code></pre>
 
         # Rolling custom function
         pl.col("random") \
-          .rolling_apply(
+          .rolling_map(
             function=np.nanstd, window_size=2) \
-          .alias("rolling_apply"),
+          .alias("rolling_map"),
     ]
 )</code></pre>
           </div>
@@ -783,7 +783,7 @@ df.height</code></pre>
           <h3>Window Functions</h3>
           <div class="group">
             <a
-              href="https://pola-rs.github.io/polars-book/user-guide/notebooks/introduction_polars-py.html#window-functions"
+              href="https://docs.pola.rs/user-guide/expressions/window/"
               target="_blank"
             >
               <span class="icon"
@@ -814,7 +814,7 @@ df.height</code></pre>
               <img src="images/inner_join.svg" style="height: 3.2rem" />
             </div>
             <a
-              href="https://pola-rs.github.io/polars-book/user-guide/howcani/combining_data/joining.html"
+              href="https://docs.pola.rs/user-guide/getting-started/#join"
               target="_blank"
             >
               <span class="icon"
